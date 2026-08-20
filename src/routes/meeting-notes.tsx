@@ -12,13 +12,13 @@ import { Textarea } from "@/components/ui/textarea";
 export const Route = createFileRoute("/meeting-notes")({
   head: () => ({
     meta: [
-      { title: "Meeting Notes Summarizer — AI Workplace Assistant" },
+      { title: "Meeting Notes Summarizer — TheoFlow" },
       {
         name: "description",
         content:
           "Turn raw meeting notes into a summary, an owner-tagged action checklist and key decisions.",
       },
-      { property: "og:title", content: "Meeting Notes Summarizer — AI Workplace Assistant" },
+      { property: "og:title", content: "Meeting Notes Summarizer — TheoFlow" },
       {
         property: "og:description",
         content: "Summary, action items and decisions extracted from messy notes.",

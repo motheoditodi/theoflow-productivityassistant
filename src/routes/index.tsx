@@ -4,13 +4,13 @@ import { ArrowRight, Mail, NotebookPen, CalendarClock, Telescope, MessagesSquare
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dashboard — AI Workplace Productivity Assistant" },
+      { title: "Dashboard — TheoFlow — Productivity Assistant" },
       {
         name: "description",
         content:
           "Your AI workspace home: generate emails, summarise meetings, plan tasks, research topics and chat with an assistant.",
       },
-      { property: "og:title", content: "Dashboard — AI Workplace Productivity Assistant" },
+      { property: "og:title", content: "Dashboard — TheoFlow — Productivity Assistant" },
       {
         property: "og:description",
         content: "Five AI tools that automate everyday professional work in one clean workspace.",

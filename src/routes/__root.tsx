@@ -79,13 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AI Workplace Productivity Assistant" },
+      { title: "TheoFlow — Productivity Assistant" },
       {
         name: "description",
         content:
           "Automate everyday workplace tasks with AI: emails, meeting notes, planning, research and chat.",
       },
-      { property: "og:title", content: "AI Workplace Productivity Assistant" },
+      { property: "og:title", content: "TheoFlow — Productivity Assistant" },
       {
         property: "og:description",
         content: "An AI workspace for emails, meeting notes, task planning and research.",
