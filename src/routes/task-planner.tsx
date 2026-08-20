@@ -14,13 +14,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/task-planner")({
   head: () => ({
     meta: [
-      { title: "AI Task Planner — AI Workplace Assistant" },
+      { title: "AI Task Planner — TheoFlow" },
       {
         name: "description",
         content:
           "Turn a task list and available hours into a prioritised, time-blocked daily or weekly schedule.",
       },
-      { property: "og:title", content: "AI Task Planner — AI Workplace Assistant" },
+      { property: "og:title", content: "AI Task Planner — TheoFlow" },
       { property: "og:description", content: "Prioritised, time-blocked plans for your week." },
     ],
   }),

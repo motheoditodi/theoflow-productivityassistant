@@ -8,12 +8,12 @@ import { useState } from "react";
 export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
-      { title: "Settings — AI Workplace Productivity Assistant" },
+      { title: "Settings — TheoFlow" },
       {
         name: "description",
         content: "Workspace preferences and responsible AI guidance for your assistant.",
       },
-      { property: "og:title", content: "Settings — AI Workplace Productivity Assistant" },
+      { property: "og:title", content: "Settings — TheoFlow" },
       { property: "og:description", content: "Manage workspace preferences and AI safeguards." },
     ],
   }),

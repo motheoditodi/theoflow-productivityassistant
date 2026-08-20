@@ -20,13 +20,13 @@ import {
 export const Route = createFileRoute("/email")({
   head: () => ({
     meta: [
-      { title: "Smart Email Generator — AI Workplace Assistant" },
+      { title: "Smart Email Generator — TheoFlow" },
       {
         name: "description",
         content:
           "Generate professional emails from a recipient, purpose, key points and a chosen tone.",
       },
-      { property: "og:title", content: "Smart Email Generator — AI Workplace Assistant" },
+      { property: "og:title", content: "Smart Email Generator — TheoFlow" },
       { property: "og:description", content: "On-tone email drafts in seconds, fully editable." },
     ],
   }),

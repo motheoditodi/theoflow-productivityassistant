@@ -12,12 +12,12 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/chatbot")({
   head: () => ({
     meta: [
-      { title: "AI Chatbot — AI Workplace Assistant" },
+      { title: "AI Chatbot — TheoFlow" },
       {
         name: "description",
         content: "A conversational AI assistant for everyday workplace questions and drafting.",
       },
-      { property: "og:title", content: "AI Chatbot — AI Workplace Assistant" },
+      { property: "og:title", content: "AI Chatbot — TheoFlow" },
       { property: "og:description", content: "Chat with your AI workplace assistant." },
     ],
   }),
