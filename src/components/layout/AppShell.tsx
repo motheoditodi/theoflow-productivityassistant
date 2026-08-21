@@ -89,26 +89,30 @@ function NavLinks({
 }
 
 export function AccountCard({ collapsed = false }: { collapsed?: boolean }) {
+  const { active } = useAccounts();
+  const name = active?.name ?? "Signed out";
+  const email = active?.email ?? "Sign in to continue";
+
   if (collapsed) {
     return (
-      <div className="mb-2 flex justify-center" title="Motheo Ditodi">
+      <Link to={active ? "/settings" : "/auth"} className="mb-2 flex justify-center" title={name}>
         <span className="flex size-8 items-center justify-center rounded-full bg-accent text-[11px] font-semibold text-accent-foreground">
-          MD
+          {active ? initials(active.name) : <UserRound className="size-4" />}
         </span>
-      </div>
+      </Link>
     );
   }
   return (
     <Link
-      to="/settings"
+      to={active ? "/settings" : "/auth"}
       className="mb-2 flex items-center gap-3 rounded-xl border border-sidebar-border bg-card/60 px-3 py-2 transition-colors hover:bg-sidebar-accent/60"
     >
       <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent text-[11px] font-semibold text-accent-foreground">
-        MD
+        {active ? initials(active.name) : <UserRound className="size-4" />}
       </span>
       <span className="flex min-w-0 flex-col leading-tight">
-        <span className="truncate text-xs font-semibold text-foreground">Motheo Ditodi</span>
-        <span className="truncate text-[11px] text-muted-foreground">motheo@theoflow.app</span>
+        <span className="truncate text-xs font-semibold text-foreground">{name}</span>
+        <span className="truncate text-[11px] text-muted-foreground">{email}</span>
       </span>
     </Link>
   );
