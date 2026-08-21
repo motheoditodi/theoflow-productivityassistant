@@ -20,7 +20,7 @@ export const Route = createFileRoute("/auth")({
     ],
   }),
   validateSearch: (search: Record<string, unknown>) => ({
-    deleted: search.deleted === true || search.deleted === "true" ? true : undefined,
+    deleted: search["deleted"] === true || search["deleted"] === "true" ? true : undefined,
   }),
   component: AuthPage,
 });
