@@ -4,6 +4,9 @@ import { InputCard } from "@/components/tools/InputCard";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
+
 
 export const Route = createFileRoute("/settings")({
   head: () => ({
