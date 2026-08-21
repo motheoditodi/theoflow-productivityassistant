@@ -59,7 +59,7 @@ function Dashboard() {
       <section className="rounded-2xl border border-border bg-card p-6 shadow-soft md:p-8">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary">Welcome back</p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-          Your AI workplace assistant
+          Welcome to TheoFlow
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           A single workspace for the writing, planning and research work that fills your day. Each
