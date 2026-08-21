@@ -4,6 +4,9 @@ import { InputCard } from "@/components/tools/InputCard";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
+
 
 export const Route = createFileRoute("/settings")({
   head: () => ({
@@ -22,6 +25,7 @@ export const Route = createFileRoute("/settings")({
 
 function SettingsPage() {
   const [prefs, setPrefs] = useState({ compact: false, autoCopy: false, preview: true });
+  const { theme, setTheme } = useTheme();
 
   return (
     <div>
@@ -31,7 +35,28 @@ function SettingsPage() {
         description="Preferences for how the assistant behaves across tools."
       />
       <div className="space-y-4">
+        <InputCard title="Appearance">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <Label className="text-sm">Dark mode</Label>
+              <p className="text-xs text-muted-foreground">
+                Switch TheoFlow between light and dark themes.
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Sun className="size-4 text-muted-foreground" />
+              <Switch
+                aria-label="Toggle dark mode"
+                checked={theme === "dark"}
+                onCheckedChange={(v) => setTheme(v ? "dark" : "light")}
+              />
+              <Moon className="size-4 text-muted-foreground" />
+            </div>
+          </div>
+        </InputCard>
+
         <InputCard title="Output preferences">
+
           {[
             { key: "compact", label: "Compact drafts", hint: "Prefer shorter, tighter output." },
             {

@@ -59,7 +59,7 @@ function Dashboard() {
       <section className="rounded-2xl border border-border bg-card p-6 shadow-soft md:p-8">
         <p className="text-xs font-semibold uppercase tracking-widest text-primary">Welcome back</p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-          Your AI workplace assistant
+          Welcome to TheoFlow
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           A single workspace for the writing, planning and research work that fills your day. Each
@@ -85,22 +85,26 @@ function Dashboard() {
       <h2 className="mt-10 mb-4 text-sm font-semibold text-foreground">Tools</h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {TOOLS.map(({ to, label, icon: Icon, blurb }) => (
-          <Link
+          <div
             key={to}
-            to={to}
-            className="group rounded-2xl border border-border bg-card p-5 shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lift"
+            className="group flex flex-col rounded-2xl border border-border bg-card p-5 shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lift"
           >
             <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-accent-foreground transition-transform duration-200 group-hover:scale-105">
               <Icon className="size-5" />
             </span>
             <h3 className="mt-4 text-sm font-semibold text-foreground">{label}</h3>
-            <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{blurb}</p>
-            <span className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-primary">
-              Open <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-            </span>
-          </Link>
+            <p className="mt-1.5 flex-1 text-xs leading-relaxed text-muted-foreground">{blurb}</p>
+            <Link
+              to={to}
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground shadow-soft transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              Open
+              <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
         ))}
       </div>
+
     </div>
   );
 }
